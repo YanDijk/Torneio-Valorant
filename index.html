@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscrição</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <h1 class="name-site">AYCHAMP</h1>
+  </div>
+
+  <div class="container">
+    <h1 class="titulo">Inscreva-se para o meu primeiro campeonato de Valorant!</h1>
+
+    <div class="image-inicio">
+      <img src="./img/Valorant_logo_-_pink_color_version.svg" class="valorant-simbol">
+      <img src="./img/Omen_-_Full_body.png" class="jett" width="700px">
+    </div>
+
+
+
+    <div class="inscreva-se">
+      <h1 class="inscreva-se-aqui">INSCREVA-SE JÁ</h1>
+      <p>*Será cobrada uma pequena taxa de R$30 pela Inscrição.</p>
+      <form id="formulario">
+        <input type="text" name="nome" placeholder="Nome completo" required><br>
+        <input type="text" name="agente" placeholder="Agente que utiliza" required><br>
+        <input type="email" name="email" placeholder="Seu melhor email" required><br>
+        <input type="tel" name="numero" placeholder="Seu melhor número" required><br>
+        <button type="submit" class="submit">Enviar</button>
+      </form>
+      
+    </div>
+  </div>
+
+
+<div class="conteudo-de-baixo">
+<div class="informacoes">
+    
+        <h2>Informações sobre o Torneio</h2>
+        <p>
+          Estou criando este torneio para trazer mais diversão e emoção para nossas vidas, que às vezes podem ser um pouco monótonas. A ideia é criar um evento competitivo onde todos possam se divertir e se conectar através do jogo.
+        </p>
+        <p>
+          O torneio ocorrerá no dia 6 de julho, um sábado, às 19:30. Este será o momento perfeito para reunir amigos, formar equipes e competir em um evento de alto nível.
+        </p>
+        <p>
+          Para quem não tem um computador disponível, recomendo que vá até a lan house <a href="https://www.instagram.com/vrinfinityjacarei/" target="_blank">VR Infinity</a>, localizada no Jacareí Shopping. Eles oferecem ótimas máquinas para você participar do torneio sem preocupações!
+        </p>
+        <p>
+          A premiação total será de R$500,00 para o time vencedor. Uma ótima oportunidade para testar suas habilidades e, quem sabe, sair com um prêmio no bolso!
+        </p>
+      
+</div> 
+  
+<div class="sobre-nos">
+    <h2>Quem Somos</h2>
+    <p>
+      Olá, meu nome é Yan, e sou um programador independente com uma paixão por jogos e tecnologia. Decidi criar o <strong>AYCHAMP</strong> para aprimorar minhas habilidades em programação e, ao mesmo tempo, proporcionar momentos de diversão para a comunidade gamer.
+    </p>
+    <p>
+      Como desenvolvedor, sempre busquei maneiras de aplicar meus conhecimentos em projetos reais e, com isso, surgiu a ideia de criar torneios de jogos como Valorant. Além de me divertir durante o processo, meu objetivo é ajudar outras pessoas a também se divertirem e, quem sabe, se superarem em competições.
+    </p>
+    <p>
+      O torneio é uma oportunidade para mostrar que a programação pode ser usada para criar algo divertido e envolvente. Quero que os participantes sintam a mesma empolgação e paixão por jogos e tecnologia que eu sinto ao criar este evento. Venha participar, aprender e se divertir comigo!
+    </p>
+</div>
+
+<div class="taxas">
+    <h2>Por que a Taxa de R$30?</h2>
+    <p>
+      A taxa de R$30 foi definida para que todos possam participar do torneio de forma justa e, ao mesmo tempo, garantir que a premiação seja significativa. O total arrecadado com essa taxa será de R$600, dos quais R$500 serão destinados para o time vencedor.
+    </p>
+    <p>
+      Entretanto, parte desse valor será destinado a mim, o organizador, para poder continuar com o desenvolvimento de mais torneios e, futuramente, criar mais competições de outros jogos. Desse valor, R$100 serão retirados para financiar a melhoria do site, garantir que mais torneios aconteçam e proporcionar uma melhor experiência para todos os participantes.
+    </p>
+    <p>
+      Com o tempo, meu objetivo é expandir o projeto para que possamos ter torneios ainda mais emocionantes e uma plataforma cada vez melhor para todos. Essa taxa é uma contribuição para que tudo isso seja possível e para garantir que o torneio tenha a premiação adequada e justa para os vencedores!
+    </p>
+</div>
+</div>
+
+</body>
+<script>
+    const form = document.getElementById('formulario');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+  
+      try {
+        const response = await fetch("https://formspree.io/f/xzzrgqzz", {
+          method: "POST",
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+  
+        if (response.ok) {
+          alert("Inscrição enviada com sucesso!");
+          setTimeout(() => {
+            window.location.href = "obrigado.html";
+          }, 3000); // Aguarda 3 segundos
+        } else {
+          alert("Erro ao enviar. Tente novamente.");
+        }
+      } catch (error) {
+        alert("Erro de conexão. Tente novamente.");
+      }
+    });
+  </script>
+  
+</html>
