@@ -5,6 +5,7 @@ body {
     padding: 0;
     font-family: "Poppins", sans-serif;
     background-image: url(./img/1125081.png);  
+    overflow-x: hidden;
   }
   @keyframes pagOpen {
     from {
@@ -367,6 +368,8 @@ text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
+    overflow: hidden;
+    
   }
 
   .titulo {
@@ -435,9 +438,9 @@ text-align: center;
 
   .rodape {
     justify-content: center;
+    width: auto;
     height: auto;
     padding: 10px;
-    width: auto;
 
   }
   .navbar {
