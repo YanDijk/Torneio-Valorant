@@ -93,6 +93,48 @@ body {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+.pgto {
+  margin-top: 10%;
+    padding: 50px;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.qrcode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ctrlc-ctrlv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ctrlc-ctrlv p{
+text-align: center;
+}
+
+.itens-dentro-pgto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itens-dentro-pgto img {
+  width: 300px;
+  height: 300px;
+}
+
 .inscreva-se input {
     background-color: #ddd;
     border-style: none;
@@ -275,4 +317,152 @@ body {
 
 .taxas {
   animation-delay: 1s;
+}
+
+.rodape{
+  margin-top: 10%;
+  background-color: #0077cc;
+  position: sticky;
+  bottom:0%;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: right;
+  display: flex;
+}
+
+.rodape button {
+  background-color: transparent;
+  border: none;
+}
+
+.rodape svg:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #2a009e;
+  border-style: none;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5%;
+}
+.btn:hover {
+  background-color: #0077cc;
+}
+
+.whatsapp {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .titulo {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  
+
+  .image-inicio img {
+    width: 130px;
+    height: auto;
+  }
+
+  .jett {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .inscreva-se {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .inscreva-se input {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .inscreva-se button {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .conteudo-de-baixo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .informacoes,
+  .sobre-nos,
+  .taxas {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .pgto {
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .itens-dentro-pgto {
+    flex-direction: column;
+  }
+
+  .itens-dentro-pgto img {
+    width: 60%;
+    height: auto;
+  }
+
+  .itens-dentro-pgto p {
+    font-size: 11px;
+    height: auto;
+  }
+
+  .rodape {
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+
+  }
+  .navbar {
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+    padding: 10px;
+
+  }
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .pgto {
+    padding: 1.5rem;
+    align-self: center;
+    justify-self: center;
+    margin-left: 5%;
+  }
+
+  .btn, .whatsapp button {
+    width: 100%;
+  }
+
+  .itens-dentro-pgto {
+    flex-direction: column;
+    align-items: center;
+}
 }
